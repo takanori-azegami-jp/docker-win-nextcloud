@@ -1,9 +1,4 @@
 version: '3.8'
-
-volumes:
-  nextcloud:
-  db:
-
 services:
   db:
     image:  mariadb:11.0.2
@@ -27,3 +22,6 @@ services:
     volumes:
       - nextcloud:/var/www/html
     restart: always
+volumes:
+  nextcloud:
+  db:
